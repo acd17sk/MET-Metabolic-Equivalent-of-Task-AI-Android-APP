@@ -1,0 +1,208 @@
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build.gradle.kts:14: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk = 34
+        ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build.gradle.kts:42: Warning: A newer version of androidx.core:core-ktx than 1.13.1 is available: 1.17.0 [GradleDependency]
+    implementation("androidx.core:core-ktx:1.13.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build.gradle.kts:43: Warning: A newer version of androidx.appcompat:appcompat than 1.7.0 is available: 1.7.1 [GradleDependency]
+    implementation("androidx.appcompat:appcompat:1.7.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build.gradle.kts:54: Warning: A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.7.2 [GradleDependency]
+    implementation("androidx.room:room-runtime:$room_version")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build.gradle.kts:55: Warning: A newer version of androidx.room:room-compiler than 2.6.1 is available: 2.7.2 [GradleDependency]
+    ksp("androidx.room:room-compiler:$room_version")
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build.gradle.kts:56: Warning: A newer version of androidx.room:room-ktx than 2.6.1 is available: 2.7.2 [GradleDependency]
+    implementation("androidx.room:room-ktx:$room_version")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build.gradle.kts:57: Warning: A newer version of androidx.room:room-paging than 2.6.1 is available: 2.7.2 [GradleDependency]
+    implementation("androidx.room:room-paging:$room_version")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build.gradle.kts:61: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0 [GradleDependency]
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build.gradle.kts:62: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0 [GradleDependency]
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/java/com/example/adamma/HistoryAdapter.kt:15: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+        notifyDataSetChanged()
+        ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/java/com/example/adamma/MainActivity.kt:45: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/java/com/example/adamma/SensorService.kt:33: Warning: Unnecessary; SDK_INT is always >= 26 [ObsoleteSdkInt]
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/values/colors.xml:3: Warning: The resource R.color.purple_200 appears to be unused [UnusedResources]
+    <color name="purple_200">#FFBB86FC</color>
+           ~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/values/colors.xml:4: Warning: The resource R.color.purple_500 appears to be unused [UnusedResources]
+    <color name="purple_500">#FF6200EE</color>
+           ~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/values/colors.xml:5: Warning: The resource R.color.purple_700 appears to be unused [UnusedResources]
+    <color name="purple_700">#FF3700B3</color>
+           ~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/values/colors.xml:6: Warning: The resource R.color.teal_200 appears to be unused [UnusedResources]
+    <color name="teal_200">#FF03DAC5</color>
+           ~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/values/colors.xml:7: Warning: The resource R.color.teal_700 appears to be unused [UnusedResources]
+    <color name="teal_700">#FF018786</color>
+           ~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/values/colors.xml:8: Warning: The resource R.color.black appears to be unused [UnusedResources]
+    <color name="black">#FF000000</color>
+           ~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/values/colors.xml:9: Warning: The resource R.color.white appears to be unused [UnusedResources]
+    <color name="white">#FFFFFFFF</color>
+           ~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml:2: Warning: The resource R.mipmap.ic_launcher_round appears to be unused [UnusedResources]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/values/strings.xml:3: Warning: The resource R.string.app_name appears to be unused [UnusedResources]
+    <string name="app_name">ADAMMA</string>
+            ~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/values/strings.xml:4: Warning: The resource R.string.history_title appears to be unused [UnusedResources]
+    <string name="history_title">Activity History</string>
+            ~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/values/strings.xml:5: Warning: The resource R.string.view_history appears to be unused [UnusedResources]
+    <string name="view_history">View History</string>
+            ~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/values/strings.xml:6: Warning: The resource R.string.loading appears to be unused [UnusedResources]
+    <string name="loading">Loading…</string>
+            ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/java/com/example/adamma/MainActivity.kt:36: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            currentClassText.text = "Permission denied. Cannot access sensors."
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/java/com/example/adamma/MainActivity.kt:72: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            currentClassText.text = "Current Activity: $metClass"
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/java/com/example/adamma/MainActivity.kt:72: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            currentClassText.text = "Current Activity: $metClass"
+                                     ~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/java/com/example/adamma/MainActivity.kt:90: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            currentClassText.text = "Tracking stopped"
+                                     ~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/layout/activity_history.xml:8: Warning: Hardcoded string "Activity History", should use @string resource [HardcodedText]
+        android:text="Activity History"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/layout/activity_main.xml:12: Warning: Hardcoded string "Current Activity: Waiting for sensor...", should use @string resource [HardcodedText]
+        android:text="Current Activity: Waiting for sensor..."
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/layout/activity_main.xml:25: Warning: Hardcoded string "Refresh Pie Chart", should use @string resource [HardcodedText]
+        android:text="Refresh Pie Chart"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/layout/activity_main.xml:30: Warning: Hardcoded string "View History", should use @string resource [HardcodedText]
+        android:text="View History"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/layout/activity_main.xml:38: Warning: Hardcoded string "Start Tracking", should use @string resource [HardcodedText]
+        android:text="Start Tracking"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/src/main/res/layout/activity_main.xml:45: Warning: Hardcoded string "Stop Tracking", should use @string resource [HardcodedText]
+        android:text="Stop Tracking"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 36 warnings

@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app"
+    name=":app"
+    type="APP"
+    maven="ADAMMA:app:"
+    agpVersion="8.2.0"
+    buildFolder="build"
+    bootClassPath="/Users/stefanoskonstantinou/Library/Android/sdk/platforms/android-34/android.jar:/Users/stefanoskonstantinou/Library/Android/sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="11"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>

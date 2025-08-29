@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ADAMMA</string>
+    <string name="history_title">Activity History</string>
+    <string name="view_history">View History</string>
+    <string name="loading">Loading…</string>
+</resources>

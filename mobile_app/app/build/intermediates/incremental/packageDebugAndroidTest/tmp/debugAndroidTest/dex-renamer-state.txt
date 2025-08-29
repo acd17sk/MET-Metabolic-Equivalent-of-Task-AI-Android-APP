@@ -1,0 +1,7 @@
+#Thu Aug 28 19:46:19 PDT 2025
+base.1=/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
+path.1=0/classes.dex
+base.0=/Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex

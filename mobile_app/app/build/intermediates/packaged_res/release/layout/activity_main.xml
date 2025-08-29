@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/currentClassText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Activity: Waiting for sensor..."
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+
+    <Button
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh Pie Chart"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/historyButton"
+        android:text="View History"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+
+    <Button
+        android:id="@+id/startButton"
+        android:text="Start Tracking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:text="Stop Tracking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+
+
+
+</LinearLayout>

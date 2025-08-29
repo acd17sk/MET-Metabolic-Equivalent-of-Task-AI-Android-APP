@@ -1,0 +1,13 @@
+Evaluation Results (5 runs on a 20% test set)
+----------------------------------------------------
+Mean Accuracy:    0.9568 (std: 0.0090)
+Mean Precision:   0.9577 (std: 0.0077)
+Mean Recall:      0.9568 (std: 0.0090)
+Mean F1-Score:    0.9568 (std: 0.0087)
+
+Individual Run F1-Scores:
+  Run 1: 0.9537
+  Run 2: 0.9599
+  Run 3: 0.9617
+  Run 4: 0.9671
+  Run 5: 0.9417

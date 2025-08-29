@@ -1,0 +1,3 @@
+com.example.adamma.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

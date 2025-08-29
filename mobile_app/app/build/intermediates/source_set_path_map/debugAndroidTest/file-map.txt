@@ -1,0 +1,6 @@
+com.example.adamma.test.app-jetified-core-1.5.0-0 /Users/stefanoskonstantinou/.gradle/caches/transforms-3/1a96416f3c5712d2e527937911a0d36c/transformed/jetified-core-1.5.0/res
+com.example.adamma.test.app-jetified-annotation-experimental-1.4.0-1 /Users/stefanoskonstantinou/.gradle/caches/transforms-3/6a64fbc3a982d13559f1d7856439a3e7/transformed/jetified-annotation-experimental-1.4.0/res
+com.example.adamma.test.app-androidTest-2 /Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build/generated/res/resValues/androidTest/debug
+com.example.adamma.test.app-mergeDebugAndroidTestResources-3 /Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.example.adamma.test.app-mergeDebugAndroidTestResources-4 /Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.example.adamma.test.app-merged_res-5 /Users/stefanoskonstantinou/Documents/ADAMMA/mobile_app/app/build/intermediates/merged_res/debugAndroidTest

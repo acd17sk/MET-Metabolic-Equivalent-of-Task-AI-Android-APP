@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.adamma.app-mergeReleaseResources-34:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/stefanoskonstantinou/.gradle/caches/transforms-3/fc6f37bcbab44f4ec710eb749632b075/transformed/appcompat-1.7.0/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}
