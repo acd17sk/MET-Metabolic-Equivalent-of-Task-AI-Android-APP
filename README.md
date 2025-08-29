@@ -95,12 +95,9 @@ Models and scalers are saved into `Models/`.
 ## 📄 Deliverables
 
 * ✅ Android app source (`mobile_app/`)
-* ✅ APK (buildable via Android Studio)
 * ✅ Trained ONNX model + scalers (`Models/`)
 * ✅ Training pipeline (`train_eval_met_pipeline.py`)
 * ✅ Evaluation results (`evaluation_results.txt`)
-* ✅ Report (to be added in `docs/`)
-* ✅ Demo video (to be added in `docs/`)
 
 ---
 
