@@ -23,7 +23,7 @@ To build the APK:
 
 1. Open `mobile_app/` in Android Studio.  
 2. Go to **Build → Build Bundle(s)/APK(s) → Build APK(s)**.  
-3. The APK will appear in `mobile_app/app/build/outputs/apk/release/app-release-unsigned.apk`.  
+3. The APK will appear in `mobile_app/app/build/outputs/apk/release/`.  
 
 ---
 
